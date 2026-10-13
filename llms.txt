@@ -6,6 +6,7 @@
 
 ## Инструкции
 
+- [English guide](https://raw.githubusercontent.com/KenGuru66/yandex-disk-rescue/main/docs/en/guide.md): the whole procedure in English, with all commands
 - [README](https://raw.githubusercontent.com/KenGuru66/yandex-disk-rescue/main/README.md): что случилось, выбор способа, быстрый старт для Windows, частые вопросы
 - [Windows](https://raw.githubusercontent.com/KenGuru66/yandex-disk-rescue/main/docs/windows.md): пошагово, на внешний диск, с расписанием
 - [macOS и Linux](https://raw.githubusercontent.com/KenGuru66/yandex-disk-rescue/main/docs/linux-macos.md): то же для macOS и Linux

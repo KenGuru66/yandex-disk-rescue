@@ -11,8 +11,9 @@
 [![rclone](https://img.shields.io/badge/rclone-1.75%2B-blue.svg)](https://rclone.org)
 [![Last commit](https://img.shields.io/github/last-commit/KenGuru66/yandex-disk-rescue)](https://github.com/KenGuru66/yandex-disk-rescue/commits/main)
 [![Stars](https://img.shields.io/github/stars/KenGuru66/yandex-disk-rescue?style=social)](https://github.com/KenGuru66/yandex-disk-rescue/stargazers)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/KenGuru66/yandex-disk-rescue)
 
-[Быстрый старт](#быстрый-старт-windows) · [Выбрать способ](#выберите-способ) · [Фото из безлимита](docs/unlimited-photos.md) · [Ошибки](docs/troubleshooting.md) · [English](#english)
+[Быстрый старт](#быстрый-старт-windows) · [Выбрать способ](#выберите-способ) · [Фото из безлимита](docs/unlimited-photos.md) · [Ошибки](docs/troubleshooting.md) · [**English guide**](docs/en/guide.md)
 
 </div>
 
@@ -168,5 +169,7 @@ attacks on Yandex data centers, rclone's own OAuth app gets `410 GoneError`, unl
 to both the REST API and WebDAV, and roughly half of the files on the tested account were not downloadable
 at all. This repo provides a working connection method (Yandex Polygon OAuth token), copy scripts tuned
 for fail-fast retries, a tool that moves unlimited photos into a regular folder through the web client's
-internal API, MD5 verification, and a Docker setup for a VPS. Docs are in Russian; commands are
-self-explanatory. Start with the [Windows quick start](#быстрый-старт-windows).
+internal API, MD5 verification, and a Docker setup for a VPS.
+
+**→ [Full English guide](docs/en/guide.md)**: install, connect with a Polygon token, copy to a local drive or
+Google Drive, verify by MD5, move unlimited photos, run on a VPS, errors.
