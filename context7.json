@@ -1,7 +1,7 @@
 {
   "$schema": "https://context7.com/schema/context7.json",
   "projectTitle": "yandex-disk-rescue",
-  "description": "Scripts and step-by-step guides (in Russian) to copy an entire Yandex Disk, including photos in the unlimited photo storage, to a local drive or Google Drive with rclone. Covers the October 2026 Yandex restrictions: Polygon OAuth token instead of rclone's own app (410 GoneError), fail-fast timeouts for files Yandex does not serve, MD5 verification, a Docker setup for a VPS.",
+  "description": "Scripts and step-by-step guides (English guide in docs/en, full docs in Russian) to copy an entire Yandex Disk, including photos in the unlimited photo storage, to a local drive or Google Drive with rclone. Covers the October 2026 Yandex restrictions: Polygon OAuth token instead of rclone's own app (410 GoneError), fail-fast timeouts for files Yandex does not serve, MD5 verification, a Docker setup for a VPS.",
   "folders": [
     "docs/en"
   ],
