@@ -1,0 +1,26 @@
+# Структура rclone.conf для сервера (права 600). Значения — заглушки. Никогда не публикуйте настоящий файл.
+
+[yandex]
+# REST API Яндекса с токеном Полигона (https://yandex.ru/dev/disk/poligon/).
+# refresh_token — заглушка: без него rclone не стартует; expiry в будущем, чтобы не пытался обновлять токен.
+# Создаётся scripts/add-yandex-remote.sh / .ps1.
+type = yandex
+token = {"access_token":"<токен Полигона>","token_type":"OAuth","refresh_token":"unused","expiry":"2099-01-01T00:00:00Z"}
+
+[gdrive]
+# Свой client_id Google (Desktop app, приложение опубликовано) — см. docs/google-drive.md.
+type = drive
+client_id = <...>.apps.googleusercontent.com
+client_secret = <...>
+scope = drive
+token = {"access_token":"...","token_type":"Bearer","refresh_token":"...","expiry":"..."}
+team_drive =
+
+# Необязательно: WebDAV как запасной источник (хешей нет, медленнее, под нагрузкой 503).
+# Пароль приложения «Файлы (WebDAV)» из Яндекс ID, в конфиг — через `rclone obscure -`.
+# [yandex-webdav]
+# type = webdav
+# url = https://webdav.yandex.ru
+# vendor = other
+# user = <логин>
+# pass = <obscured>

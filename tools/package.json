@@ -1,0 +1,10 @@
+{
+  "name": "yandex-photounlim-move",
+  "private": true,
+  "description": "Перенос фото из безлимита Яндекс Диска в обычную папку (см. docs/unlimited-photos.md)",
+  "license": "MIT",
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "playwright-core": "1.63.0"
+  }
+}

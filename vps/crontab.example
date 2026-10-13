@@ -1,0 +1,4 @@
+# crontab -e  (от пользователя, у которого есть доступ к docker)
+# Каждую ночь: копировать всё заново, без фильтра — докачивает новое и то, что Яндекс вернул.
+# flock внутри скрипта не даст стартовать второму запуску, пока идёт первый.
+23 2 * * * DEST=gdrive:Yandex-backup /home/USER/yandex-backup/run-backup.sh >> /home/USER/yandex-backup/logs/cron.out 2>&1

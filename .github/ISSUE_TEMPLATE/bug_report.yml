@@ -1,0 +1,36 @@
+name: Не работает
+description: Ошибка в скриптах или инструкции
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Не вставляйте токены, содержимое rclone.conf и cookies.** Если вставили по ошибке — удалите и отзовите токен.
+  - type: dropdown
+    id: os
+    attributes:
+      label: Система
+      options: [Windows, macOS, Linux, VPS / Docker]
+    validations:
+      required: true
+  - type: input
+    id: rclone
+    attributes:
+      label: Версия rclone
+      description: первая строка `rclone version`
+  - type: textarea
+    id: command
+    attributes:
+      label: Что запускали
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: errors
+    attributes:
+      label: Строки ERROR из лога
+      render: text
+  - type: textarea
+    id: expected
+    attributes:
+      label: Что ожидали и что получилось

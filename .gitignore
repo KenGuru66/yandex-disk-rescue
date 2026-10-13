@@ -1,0 +1,23 @@
+# Секреты: никогда не коммитить
+rclone.conf
+config/
+*.token
+token*.txt
+*.pass
+*client_secret*.json
+gdrive_client*.json
+.ya_*
+
+# Данные прогонов
+logs/
+state/
+*.log
+*.jsonl
+yandex-rescue-*
+missing.txt
+differ.txt
+dead.txt
+filter-*.txt
+node_modules/
+package-lock.json
+__pycache__/

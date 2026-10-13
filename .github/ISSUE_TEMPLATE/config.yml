@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Частые вопросы и ошибки
+    url: https://github.com/KenGuru66/yandex-disk-rescue/blob/main/docs/troubleshooting.md
+    about: Половина файлов не копируется, 410, 401, медленно — ответы здесь
