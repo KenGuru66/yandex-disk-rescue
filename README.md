@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="docs/assets/social-preview.png" alt="yandex-disk-rescue" width="720">
+<img src="docs/assets/cover.jpg" alt="Спасите файлы с Яндекс Диска — yandex-disk-rescue" width="800">
 
 # yandex-disk-rescue
 
