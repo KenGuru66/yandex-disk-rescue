@@ -1,0 +1,29 @@
+# GitHub Pages: https://kenguru66.github.io/yandex-disk-rescue/
+title: yandex-disk-rescue
+description: Спасите файлы с Яндекс Диска — весь Диск и фото из «безлимита» на свой диск или в Google Drive через rclone
+url: https://kenguru66.github.io
+baseurl: /yandex-disk-rescue
+lang: ru
+theme: jekyll-theme-cayman
+plugins:
+  - jekyll-readme-index
+  - jekyll-relative-links
+  - jekyll-seo-tag
+  - jekyll-sitemap
+relative_links:
+  enabled: true
+  collections: false
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /docs/assets/cover.jpg
+markdown: kramdown
+kramdown:
+  input: GFM
+  parse_block_html: true
+include:
+  - llms.txt
+exclude:
+  - context7.json
+  - tools/package.json

@@ -1,0 +1,29 @@
+# yandex-disk-rescue
+
+> Скрипты и пошаговые инструкции, чтобы скопировать весь Яндекс Диск, включая фото из «безлимита», на свой диск или в Google Drive через rclone. С обходом ограничений Яндекса октября 2026 года.
+
+Проверено 13.10.2026 на аккаунте 1,8 ТБ. Приложению rclone Яндекс отвечает 410 GoneError на любые файлы, поэтому подключение идёт по токену Полигона Яндекс Диска с заглушкой refresh_token. Фото из безлимита не видны ни REST API, ни WebDAV, их сначала переносят в обычную папку. Около половины файлов на тестовом аккаунте не отдавались вообще, поэтому копирование настроено на быстрый отказ и повтор. Только rclone copy, не sync. Проверка копии: rclone check по MD5.
+
+## Инструкции
+
+- [README](https://raw.githubusercontent.com/KenGuru66/yandex-disk-rescue/main/README.md): что случилось, выбор способа, быстрый старт для Windows, частые вопросы
+- [Windows](https://raw.githubusercontent.com/KenGuru66/yandex-disk-rescue/main/docs/windows.md): пошагово, на внешний диск, с расписанием
+- [macOS и Linux](https://raw.githubusercontent.com/KenGuru66/yandex-disk-rescue/main/docs/linux-macos.md): то же для macOS и Linux
+- [Google Drive](https://raw.githubusercontent.com/KenGuru66/yandex-disk-rescue/main/docs/google-drive.md): свой client_id, копирование в облако, лимит 750 ГБ в сутки
+- [VPS и Docker](https://raw.githubusercontent.com/KenGuru66/yandex-disk-rescue/main/docs/vps.md): копирование по расписанию на сервере, фильтр недоступных файлов
+- [Фото из безлимита](https://raw.githubusercontent.com/KenGuru66/yandex-disk-rescue/main/docs/unlimited-photos.md): три способа достать photounlim
+- [Ошибки](https://raw.githubusercontent.com/KenGuru66/yandex-disk-rescue/main/docs/troubleshooting.md): 410, 401, тайм-ауты, как отозвать токен
+
+## Скрипты
+
+- [add-yandex-remote.ps1](https://raw.githubusercontent.com/KenGuru66/yandex-disk-rescue/main/scripts/add-yandex-remote.ps1): подключение Яндекс Диска к rclone по токену (Windows PowerShell 5.1+)
+- [add-yandex-remote.sh](https://raw.githubusercontent.com/KenGuru66/yandex-disk-rescue/main/scripts/add-yandex-remote.sh): то же для bash
+- [backup.ps1](https://raw.githubusercontent.com/KenGuru66/yandex-disk-rescue/main/scripts/backup.ps1): копирование с быстрым отказом и списком несохранённого (Windows)
+- [backup.sh](https://raw.githubusercontent.com/KenGuru66/yandex-disk-rescue/main/scripts/backup.sh): то же для bash
+- [run-backup.sh](https://raw.githubusercontent.com/KenGuru66/yandex-disk-rescue/main/vps/run-backup.sh): rclone в Docker на сервере
+- [yd.js](https://raw.githubusercontent.com/KenGuru66/yandex-disk-rescue/main/tools/yd.js): перенос фото из безлимита через внутренний API веб-версии
+
+## Optional
+
+- [Как это устроено](https://raw.githubusercontent.com/KenGuru66/yandex-disk-rescue/main/docs/how-it-works.md): замеры, методы models-v2, почему такие тайм-ауты
+- [Репозиторий](https://github.com/KenGuru66/yandex-disk-rescue)

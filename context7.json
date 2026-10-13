@@ -1,0 +1,14 @@
+{
+  "$schema": "https://context7.com/schema/context7.json",
+  "projectTitle": "yandex-disk-rescue",
+  "description": "Scripts and step-by-step guides (in Russian) to copy an entire Yandex Disk, including photos in the unlimited photo storage, to a local drive or Google Drive with rclone. Covers the October 2026 Yandex restrictions: Polygon OAuth token instead of rclone's own app (410 GoneError), fail-fast timeouts for files Yandex does not serve, MD5 verification, a Docker setup for a VPS.",
+  "folders": ["docs", "scripts", "vps", "tools"],
+  "excludeFolders": ["docs/assets", ".github", "node_modules"],
+  "rules": [
+    "Back up Yandex Disk with `rclone copy`, never `rclone sync`: sync deletes files in the destination.",
+    "Connect Yandex Disk with a Polygon OAuth token and a placeholder refresh_token (scripts/add-yandex-remote.sh or .ps1): rclone's own OAuth app gets 410 GoneError on file operations.",
+    "Photos in the Yandex unlimited area (photounlim) are invisible to the REST API and WebDAV; move them to a regular folder first (docs/unlimited-photos.md).",
+    "Use --timeout 60s --low-level-retries 2 --retries 1 so unavailable files fail fast, then rerun the same copy later to fetch the rest.",
+    "Verify a copy with `rclone check <source> <destination> --one-way`: Yandex Disk and Google Drive both expose MD5."
+  ]
+}
