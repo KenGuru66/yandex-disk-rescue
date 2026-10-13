@@ -26,7 +26,9 @@ curl -s -H "Authorization: OAuth ТОКЕН" "https://cloud-api.yandex.net/v1/di
 
 Приложение Яндекс Диска для Windows и macOS умеет скачать все фото с Диска на компьютер, в том числе
 из безлимита: **Настройки → Автозагрузка → «Копировать фото и видео на компьютер» → все**
-([справка](https://yandex.ru/support/disk-desktop-windows/autoupload.html)). Нужно место на диске.
+([справка](https://yandex.ru/support/disk-desktop-windows/autoupload.html)). Нужно место на диске
+и подписка Яндекс 360: с 3 июня 2026 года без неё клиент не синхронизирует файлы
+([3DNews](https://3dnews.ru/1142064/nastolnie-prilogeniya-yandeks-diska-perestanut-normalno-rabotat-u-besplatnih-polzovateley)).
 Во время ограничений Яндекса этот способ мы не проверяли.
 
 ## Способ 2. Вручную в браузере (до 500 фото за раз)
